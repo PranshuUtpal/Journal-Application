@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="" th:href="@{/CSS/about.css}">
+</head>
+<body>
+<!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="/Image/iconn.jpg" alt="Logo" id="logoPlaceholder"> <!-- Placeholder for Logo -->
+        <div class="app-name">Journal App</div>
+    </div>
+    <div class="right-nav">
+        <div class="nav-links">
+            <a href="" th:href="@{/journalapp/homepage}">Home</a>
+        </div>
+        <div class="profile-container" id="profileSection">
+            <div class="profile-icon" id="profileIcon">JA</div>
+            <div class="profile-dropdown" id="profileDropdown">
+                <a href="#">View Profile</a>
+                <a href="#" th:href="@{/journalapp/update-profile}">Update Profile</a>
+                <a href="#" th:href="@{/logout}">Logout</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Greeting Section -->
+<section class="greeting-section">
+    <h1 id="greetingMessage">Hi, fetching your greeting...</h1>
+</section>
+
+<!-- Developed By Section -->
+<section class="developed-by-section">
+    <div class="background-image-container">
+        <div class="content-box">
+            <h2>Developed By:</h2>
+            <p>Pranshu Priyadarshi</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/pranshu-priyadarshi-b65643248?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                    <img src="/Image/linkedin.png" alt="LinkedIn Logo" class="social-logo"> LinkedIn
+                </a> |
+                <a href="https://github.com/PranshuUtpal" target="_blank">
+                    <img src="/Image/github.png" alt="GitHub Logo" class="social-logo"> GitHub
+                </a> |
+                <a href="https://x.com/pranshupriyada3?s=11&t=JwtQb8hOYsM4PvnesaPI0g" target="_blank">
+                    <img src="/Image/x-icon.png" alt="Twitter Logo" class="social-logo"> Twitter
+                </a>
+            </div>
+            <p>For feedback, drop an email at: pranshuraj2002@gmail.com</p>
+        </div>
+    </div>
+</section>
+
+<!-- Add jwt-decode script here, before closing body tag -->
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+<!-- JavaScript to fetch and display user details -->
+<script src="" th:src="@{/JS/about.js}"></script>
+
+</body>
+</html>

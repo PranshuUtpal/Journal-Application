@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal App</title>
+    
+    <!-- Link to CSS (you can add your own styles here or use a stylesheet) -->
+    <link rel="stylesheet" href="#" >
+
+    <style>
+        /* Example navbar styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #454545; /* #f0f0f0 Set your light-hover-color */
+            border-bottom: 2px solid #dcdcdc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            height: 40px; /* Placeholder size for your logo */
+            margin-right: 10px;
+        }
+        .navbar .logo .app-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #FFFFFF; /*333*/
+        }
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #FFFFFF; /*333*/
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .navbar .nav-links a:hover {
+            background-color: #ddd;
+            transition: 0.3s;
+        }
+        /* Ensure the content is properly padded below the navbar */
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="" alt="Logo" id="logoPlaceholder"> <!-- Placeholder for Logo -->
+            <div class="app-name">Journal App</div>
+        </div>
+        <div class="nav-links">
+            <a href="" th:href="@{/journalapp/homepage.html}">Home</a> <!-- Home link -->
+        </div>
+    </nav>
+
+    <div th:replace="${content}"></div>
+
+</body>
+</html>

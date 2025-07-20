@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Journal</title>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="" th:href="@{/CSS/add-journal.css}">
+</head>
+<body>
+
+<!-- Navbar Section -->
+<nav class="navbar fixed-top">
+    <div class="logo">
+        <img src="/Image/iconn.jpg" alt="Logo" id="logoPlaceholder"> <!-- Placeholder for Logo -->
+        <div class="app-name">Journal App</div>
+    </div>
+    <div class="nav-links">
+        <a href="" th:href="@{/journalapp/homepage}">Home</a> <!-- Home link -->
+    </div>
+</nav>
+
+<div class="containerr">
+    <!-- Content Section -->
+    <div class="content">
+        <div class="add-journal-container">
+            <h1>Add Journal</h1>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Enter journal title">
+            </div>
+
+            <div class="form-group">
+                <label for="sentiment">Sentiment</label>
+                <select id="sentiment">
+                    <option value="">Select Sentiment</option>
+                    <option value="HAPPY">Happy</option>
+                    <option value="SAD">Sad</option>
+                    <option value="ANGRY">Angry</option>
+                    <option value="ANXIOUS">Anxious</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content</label>
+                <div class="toolbar">
+                    <button onclick="document.execCommand('bold', false, '');">Bold</button>
+                    <button onclick="document.execCommand('underline', false, '');">Underline</button>
+                    <button onclick="document.execCommand('insertOrderedList', false, '');">Numbered List</button>
+                </div>
+                <textarea id="content" placeholder="Write your journal content here..."></textarea>
+            </div>
+
+            <button class="post-btn" id="postJournalBtn">Post Journal</button>
+        </div>
+    </div>
+</div>
+
+<!-- Load external JavaScript -->
+<script th:src="@{/JS/add-journal.js}" defer></script>
+<script th:inline="javascript">
+    var jwtToken = /*[[${jwtToken}]]*/ '';
+</script>
+</body>
+</html>

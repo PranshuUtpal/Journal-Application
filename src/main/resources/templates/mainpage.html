@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PranshhVoyages Journal App</title>
+    <link rel="stylesheet" href="" th:href="@{/CSS/mainpage.css}">
+</head>
+<body>
+    <div class="background-image">
+        <!-- Shadow Effect Overlay -->
+        <div class="overlay"></div>
+        <!-- Main Content Section -->
+        <div class="title">
+            <!-- App Title -->
+            <h1 class="app-title">PranshhVoyages Journal App</h1>
+        </div>
+
+        <div class="main-content">
+            <!-- Welcome Greeting -->
+            <p class="welcome-text">
+                Welcome to the PranshhVoyages Journal App. Keep track of your daily thoughts, ideas, and life experiences in a beautifully organized journal. Share your journeys, store   		memories, and never lose a moment.
+            </p>
+
+            <!-- Login/Signup Button -->
+            <a href="/signin" class="btn">Login/Signup</a>
+            <!--            <a th:href="@{/index}" class="btn">Login/Signup</a>-->
+        </div>
+    </div>
+</body>
+</html>

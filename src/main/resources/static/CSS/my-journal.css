@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #36454F; /* Charcoal */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Example navbar styles */
+.navbar {
+    background-color: #454545; /* #f0f0f0 Set your light-hover-color */
+    border-bottom: 2px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px; /* Placeholder size for your logo */
+    margin-right: 10px;
+}
+
+.navbar .logo .app-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF; /*333*/
+}
+
+/* Updated nav-links styles to align Home and Profile to the right */
+.navbar .right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #FFFFFF; /*333*/
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px; /* Add some space between links */
+}
+
+.navbar .nav-links a:hover {
+    background-color: #ddd;
+    transition: 0.3s;
+}
+
+/* Ensure the content is properly padded below the navbar */
+.content {
+    padding: 20px;
+}
+
+
+/* Profile Icon and Dropdown */
+.profile-container {
+    position: relative;
+}
+
+.profile-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    color: #36454F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid #800020; /* Red border */
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #696969; /* Dim gray */
+    border-radius: 5px;
+    overflow: hidden;
+    width: 150px;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #696969;
+    text-align: center;
+}
+
+.profile-dropdown a:hover {
+    background-color: #555555;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    margin-top: -30px;
+    justify-content: center;
+    padding: 20px;
+    flex: 1;
+}
+/* Subscription Section */
+.subscribe-section {
+    text-align: center;
+    margin-top: 50px;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.main-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Search Section */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #555555;
+}
+
+/* Journal List */
+.journal-list {
+    margin-top: 20px;
+}
+
+/* Journal Entry */
+.journal-entry {
+    background-color: #2f2f2f;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Subscription Section */
+.subscribe-section {
+    text-align: center;
+    margin-top: 50px;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.subscribe-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.subscribe-form input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    background-color: #002E63; /* Cool Black */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #001B3A;
+}
+
+.subscribe-section p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    background-color: #1c1c1c;
+    padding: 0px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+

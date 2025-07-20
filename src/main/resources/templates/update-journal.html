@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Journal</title>
+    <link rel="stylesheet" href="" th:href="@{/CSS/update-journal.css}">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="/Image/iconn.jpg" alt="Logo" id="logoPlaceholder"> <!-- Placeholder for Logo -->
+        <div class="app-name">Journal App</div>
+    </div>
+    <div class="right-nav">
+        <div class="nav-links">
+            <a href="#" th:href="@{/journalapp/homepage}">Home</a>
+        </div>
+        <div class="profile-container" id="profileSection">
+            <div class="profile-icon" id="profileIcon">JA</div>
+            <div class="profile-dropdown" id="profileDropdown">
+                <a href="#">View Profile</a>
+                <a href="#" th:href="@{/journalapp/update-profile}">Update Profile</a>
+                <a href="#" th:href="@{/logout}">Logout</a>
+                <a href="#" th:href="@{/journalapp/about}">About</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Update Journal Section -->
+<section class="update-journal-section">
+    <h1>Update Journal</h1>
+
+    <!-- Dropdown for selecting a journal by title -->
+    <label for="journalDropdown">Select Journal:</label>
+    <select id="journalDropdown" name="journalDropdown" onchange="loadJournalData()">
+        <!-- Journal Titles will be loaded dynamically -->
+    </select>
+
+    <!-- Update form with prefilled data -->
+    <form id="updateJournalForm" onsubmit="submitUpdate(event)">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="sentiment">Sentiment:</label>
+        <select id="sentiment" name="sentiment" required>
+            <option value="HAPPY">Happy</option>
+            <option value="SAD">Sad</option>
+            <option value="ANGRY">Angry</option>
+            <option value="ANXIOUS">Anxious</option>
+        </select>
+
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required></textarea>
+
+        <button type="submit">Update Journal</button>
+    </form>
+</section>
+
+<!-- Add jwt-decode script here, before closing body tag -->
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+<!-- JavaScript to fetch and display user details -->
+<script src="" th:src="@{/JS/update-journal.js}"></script>
+
+</body>
+</html>

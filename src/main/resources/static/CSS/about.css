@@ -1,0 +1,171 @@
+/* Global Style */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #454545;
+    border-bottom: 2px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo .app-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+/* Updated nav-links styles to align Home and Profile to the right */
+.navbar .right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #ddd;
+    transition: 0.3s;
+}
+/* Ensure the content is properly padded below the navbar */
+.content {
+    padding: 20px;
+}
+
+.profile-container {
+    position: relative;
+}
+
+.profile-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    color: #36454F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid #800020;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #696969;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 150px;
+    z-index: 1000;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #696969;
+    text-align: center;
+}
+
+.profile-dropdown a:hover {
+    background-color: #555555;
+}
+
+/* Greeting Section */
+.greeting-section {
+    text-align: center;
+    padding: 25px;
+    background-color: #005C29;
+    color: white;
+}
+
+.greeting-section h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Developed By Section */
+.developed-by-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.background-image-container {
+    width: 80%;
+    background-image: url('/Image/bg-01.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.content-box {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-box h2, .content-box p {
+    margin: 10px 0;
+}
+
+.social-links a {
+    color: #FFD700;
+    text-decoration: none;
+}
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color:Tomato;
+    font-weight: bold;
+}
+
+.social-links img.social-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}

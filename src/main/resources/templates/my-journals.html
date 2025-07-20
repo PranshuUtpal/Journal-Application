@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PranshhVoyages Journal App</title>
+    <link rel="stylesheet" href="#" th:href="@{/CSS/my-journal.css}">
+</head>
+<body>
+    <!-- Navbar Section -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="/Image/iconn.jpg" alt="Logo" id="logoPlaceholder"> <!-- Placeholder for Logo -->
+        <div class="app-name">Journal App</div>
+    </div>
+
+    <div class="right-nav">
+        <div class="nav-links">
+        <a href="" th:href="@{/journalapp/homepage}">Home</a> <!-- Home  link -->
+        </div>
+        <div class="profile-container" id="profileSection">
+            <!-- Placeholder for initials or profile picture -->
+            <div id="profileIcon" class="profile-icon">AB</div>
+            <div class="profile-dropdown" id="profileDropdown">
+                <a href="#" th:href="@{/journalapp/view-profile}">View Profile</a>
+                <a href="#" th:href="@{/journalapp/update-profile}">Update Profile</a>
+                <a href="#" th:href="@{/logout}">Logout</a>
+                <a href="#" th:href="@{/journalapp/about}">About</a>
+            </div>
+        </div>
+    </div>
+    
+</nav>
+
+    
+
+    <!-- Main Content -->
+    <div class="main-content">
+	<h2>My All Journals</h2>
+        <!-- Search Section -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search Journals">
+            <button id="searchBtn">Search</button>
+        </div>
+        
+        <!-- Journal List (Not Scrollable) -->
+        <div class="journal-list" id="journalList">
+            <!-- Journal Entries Will Be Populated Here Dynamically -->
+        </div>
+    </div>
+
+    
+    <!-- Subscription Section -->
+        <div class="subscribe-section">
+            <h2>Get productivity tips delivered straight to your inbox</h2>
+            <div class="subscribe-form">
+                <input type="email" id="emailInput" placeholder="Email address" required>
+                <button id="subscribeBtn">Subscribe</button>
+            </div>
+            <p>We’ll email you 1-3 times per week—and never share your information.</p>
+        </div>
+    </div>
+
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <p>All is well</p>
+    </div>
+
+    <!-- Add jwt-decode script here, before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="" th:src="@{/JS/my-journal.js}"></script>
+
+
+
+</body>
+</html>

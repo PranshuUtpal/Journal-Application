@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile View</title>
+    <link rel="stylesheet" href="" th:href="@{/CSS/viewProfile.css}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/Image/iconn.jpg" alt="Logo" id="logoPlaceholder"> <!-- Placeholder for Logo -->
+            <div class="app-name">Journal App</div>
+        </div>
+        <div class="right-nav">
+            <div class="nav-links">
+                <a href="" th:href="@{/journalapp/homepage}">Home</a>
+            </div>
+            <div class="profile-container" id="profileSection">
+                <div class="profile-icon" id="profileIcon">JA</div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="#">View Profile</a>
+                    <a href="#" th:href="@{/journalapp/update-profile}">Update Profile</a>
+                    <a href="#" th:href="@{/logout}">Logout</a>
+                    <a href="#" th:href="@{/journalapp/about}">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="profile-content">
+        <!-- Profile Image -->
+        <div class="profile-image-container">
+            <img id="profileImage" src="" alt="Profile Image" class="profile-image">
+        </div>
+
+        <!-- Profile Details -->
+        <div class="profile-details">
+            <h1 id="fullName">Full Name</h1>
+            <p><strong>Username:</strong> <span id="userName">Username</span></p>
+            <p><strong>Email:</strong> <span id="email">Email</span></p>
+            <p><strong>Roles:</strong> <span id="roles">Roles</span></p>
+            <p><strong>Sentiment Analysis Enabled:</strong> <span id="sentimentAnalysis">NA</span></p>
+            <p><strong>Journal Entries:</strong> <span id="journalEntries"> No Journal Entries</span></p>
+        </div>
+
+        <!-- Delete Profile Button -->
+        <button id="deleteProfileButton" class="delete-profile-btn">Delete Profile</button>
+
+        <!-- Confirmation Popup -->
+        <div id="deleteConfirmationPopup" class="popup">
+            <div class="popup-content">
+                <p>Are you sure you want to delete your profile?</p>
+                <button id="confirmDeleteButton" class="popup-btn yes-btn">Yes</button>
+                <button id="cancelDeleteButton" class="popup-btn no-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Add jwt-decode script here, before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+    <!-- JavaScript to fetch and display user details -->
+    <script src="" th:src="@{/JS/viewProfile.js}"></script>
+</body>
+</html>

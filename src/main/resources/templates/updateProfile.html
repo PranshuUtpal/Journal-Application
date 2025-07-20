@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Profile</title>
+  <link rel="stylesheet" href="#" th:href="@{/CSS/updateProfile.css}"> <!-- Ensure to use the same stylesheet for consistent styling -->
+</head>
+<body>
+<!-- Navbar Section -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="/Image/iconn.jpg" alt="Logo" id="logoPlaceholder"> <!-- Placeholder for Logo -->
+    <div class="app-name">Journal App</div>
+  </div>
+
+  <div class="right-nav">
+    <div class="nav-links">
+      <a href="" th:href="@{/journalapp/homepage}">Home</a> <!-- Home  link -->
+    </div>
+    <div class="profile-container" id="profileSection">
+      <!-- Placeholder for initials or profile picture -->
+      <div id="profileIcon" class="profile-icon">AB</div>
+      <div class="profile-dropdown" id="profileDropdown">
+        <a href="#" th:href="@{/journalapp/view-profile}">View Profile</a>
+        <a href="#">Update Profile</a>
+        <a href="#" th:href="@{/logout}">Logout</a>
+        <a href="#" th:href="@{/journalapp/about}">About</a>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+<!-- Update Profile Form -->
+<div class="profile-content">
+  <h1>Update Profile</h1>
+
+  <form id="updateProfileForm" class="update-form">
+    <!-- Pre-filled fields -->
+
+    <div class="form-group">
+      <label for="profileImageInput">Profile Image</label>
+      <input type="file" id="profileImageInput" name="profileImage" accept="image/*" />
+      <img id="profileImagePreview" src="" alt="Profile Image Preview" class="profile-image-preview" style="display:none; width: 150px; height: 150px; border-radius: 50%;" />
+    </div>
+
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="userName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+    </div>
+
+
+    <div class="form-group">
+      <label for="sentimentAnalysis">Sentiment Analysis Enabled</label>
+      <input type="checkbox" id="sentimentAnalysis" name="sentimentAnalysis" />
+    </div>
+
+    <button type="submit" class="update-btn">Update Profile</button>
+  </form>
+</div>
+
+<!-- Add jwt-decode script here, before closing body tag -->
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+<!-- JavaScript -->
+<script src="" th:src="@{/JS/updateProfile.js}"></script>
+
+</body>
+</html>
