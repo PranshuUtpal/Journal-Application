@@ -1,0 +1,38 @@
+﻿services:
+  - type: web
+    name: journal-application
+    runtime: java
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -Dserver.port=$PORT -jar target/journalApp-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: JAVA_TOOL_OPTIONS
+        value: -Xmx512m
+      # MongoDB Configuration
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DATABASE
+        value: journaldb
+      # Mail Configuration
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+      # Redis Configuration
+      - key: REDIS_HOST
+        sync: false
+      - key: REDIS_PORT
+        sync: false
+      - key: REDIS_PASSWORD
+        sync: false
+      # Kafka Configuration
+      - key: KAFKA_BOOTSTRAP_SERVERS
+        sync: false
+      - key: KAFKA_USERNAME
+        sync: false
+      - key: KAFKA_PASSWORD
+        sync: false
+      # Weather API
+      - key: WEATHER_API_KEY
+        sync: false

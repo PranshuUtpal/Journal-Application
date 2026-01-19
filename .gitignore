@@ -1,4 +1,4 @@
-HELP.md
+﻿HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -12,14 +12,13 @@ target/
 .settings
 .springBeans
 .sts4-cache
-*.yml
-*.log
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-/htmlReport
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -32,3 +31,21 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Environment Variables - CRITICAL ###
+application-dev.properties
+application-local.properties
+.env
+*.env
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### Log Files ###
+*.log
+logs/
+
+### Sensitive Data ###
+**/application-dev.properties
+**/secrets.properties
