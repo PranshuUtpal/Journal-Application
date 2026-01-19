@@ -34,3 +34,5 @@ spring.kafka.consumer.properties.spring.json.trusted.packages = net.pranshhvoyag
 spring.kafka.properties.security.protocol=SASL_SSL
 # Best practice for higher availability in Apache Kafka clients prior to 3.0
 spring.kafka.properties.session.timeout.ms=45000
+
+weather.api.key=e7c06361dc2cc17f37a9701a9d66440e
